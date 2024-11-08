@@ -10,28 +10,30 @@ const NewArrivals = () => {
       <p className="text-[#484848] text-center text-4xl font-medium">
         New Arrivals
       </p>
-      <p className="text-center w-[600px] text-sm mx-auto my-3">
+      <p className="text-center lg:w-[600px] text-sm mx-auto my-3">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque
         duis ultrices sollicitudin aliquam sem. Scelerisque duis ultrices
         sollicitudin
       </p>
 
       {/* Tab mapping */}
-      <div className="flex gap-2 mx-auto mt-5 w-fit">
-        {tabs.map((tab) => (
-          <div key={tab} className="flex flex-row gap-2">
-            <button
-              className={`py-2 px-4 rounded-md text-sm  ${
-                activeTab === tab
-                  ? "text-white bg-black"
-                  : "text-gray-700 bg-[#FAFAFA] hover:bg-[#FAFAFA]"
-              }`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {tab}
-            </button>
-          </div>
-        ))}
+      <div className="w-full overflow-x-auto">
+        <div className="flex gap-2 mx-auto mt-5 w-fit">
+          {tabs.map((tab) => (
+            <div key={tab} className="flex flex-row gap-2">
+              <button
+                className={`py-2 px-4 rounded-md whitespace-nowrap text-sm  ${
+                  activeTab === tab
+                    ? "text-white bg-black"
+                    : "text-gray-700 bg-[#FAFAFA] hover:bg-[#FAFAFA]"
+                }`}
+                onClick={() => setActiveTab(tab)}
+              >
+                {tab}
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-12 mt-8  gap-8 w-full">
@@ -41,7 +43,7 @@ const NewArrivals = () => {
           return (
             <div
               key={detail.title}
-              className="bg-white col-span-4 shadow-lg p-4 rounded-lg"
+              className="bg-white col-span-12 md:col-span-6 lg:col-span-4 shadow-lg p-4 rounded-lg"
             >
               <div
                 style={{

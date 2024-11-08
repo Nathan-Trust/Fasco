@@ -1,7 +1,8 @@
 import featured from "../../assets/landing-page/featured/featured.svg"
 const Featured = () => {
+  // TODO: CONTINUE AND FIX THIS
   return (
-    <div className="screen-max-width py-12 flex ">
+    <div className="screen-max-width py-12 flex flex-col lg:flex-row ">
       <img src={featured} alt="featured" className="w-[60%]" />
       <div className="flex-1  bg-[#DADADA]">
         <p>Women Collection</p>
